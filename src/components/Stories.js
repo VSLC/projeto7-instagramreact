@@ -1,14 +1,4 @@
-const arrayStories = [
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/catanacomics1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/badvibesmeme1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
-    { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" }
-];
+
 
 function Storie(props) {
     return (
@@ -23,6 +13,18 @@ function Storie(props) {
 }
 
 export default function Stories() {
+    const arrayStories = [
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/catanacomics1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/badvibesmeme1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" },
+        { src: "/img/stories_background.jpg", src2: "/img/9gag1.png", title: "9gag" }
+    ];
+
     return (
         <div class="caixa-stories flex">
             {arrayStories.map((e) => <Storie src={e.src} src2={e.src2} title={e.title} />)}

@@ -1,10 +1,3 @@
-const arrayPosts = [
-    { img1: "/img/9gag1.png", titulopersona: "meow", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por Responde e outras 100.000 pessoas" },
-    { img1: "/img/9gag1.png", titulopersona: "Voller", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por voller e outras 100.000 pessoas" },
-    { img1: "/img/9gag1.png", titulopersona: "Gabriel", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por Castro e outras 100.000 pessoas" },
-    { img1: "/img/9gag1.png", titulopersona: "Antônio", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por galo e outras 100.000 pessoas" }
-];
-
 function Post(props) {
     return (
         <div class="posts">
@@ -24,7 +17,7 @@ function Post(props) {
 
             <div class="posts-icons">
                 <div>
-                    <ion-icon class="tamanho-icone" name="heart-outline"></ion-icon>
+                    <ion-icon class="tamanho-icone like" name="heart"></ion-icon>
                     <ion-icon class="tamanho-icone" name="chatbubble-outline"></ion-icon>
                     <ion-icon class="tamanho-icone" name="paper-plane-outline"></ion-icon>
                 </div>
@@ -43,6 +36,12 @@ function Post(props) {
 }
 
 export default function Feed() {
+    const arrayPosts = [
+        { img1: "/img/9gag1.png", titulopersona: "meow", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por Responde e outras 100.000 pessoas" },
+        { img1: "/img/9gag1.png", titulopersona: "Voller", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por voller e outras 100.000 pessoas" },
+        { img1: "/img/9gag1.png", titulopersona: "Gabriel", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por Castro e outras 100.000 pessoas" },
+        { img1: "/img/9gag1.png", titulopersona: "Antônio", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", message: "Curtido por galo e outras 100.000 pessoas" }
+    ];
 
     return (
         <div class="conteudo-principal">
