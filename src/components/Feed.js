@@ -1,5 +1,30 @@
 import React from "react"
+
 function Post(props) {
+    const [like, setLike] = React.useState(false);
+    const [changeColor, setChangeColor] = React.useState("red");
+    const [changeName, setChangeName] = React.useState("heart-outline")
+
+    function giveLike() {
+        setChangeName("heart");
+        setChangeColor("red");
+        setLike(true)
+    }
+
+    function giveDislike() {
+        if (like) {
+            setChangeName("heart-outline");
+            setChangeColor("");
+            setLike(false);
+
+        } else {
+            setChangeName("heart");
+            setChangeColor("red");
+            setLike(true)
+        }
+
+    }
+
     return (
         <div class="posts">
             <div class="posts-persona align-items">
@@ -12,13 +37,13 @@ function Post(props) {
                 </div>
             </div>
 
-            <div class="posts-image">
+            <div class="posts-image" onClick={giveLike}>
                 <img src={props.img2} alt="gato no telefone" />
             </div>
 
             <div class="posts-icons">
                 <div>
-                    <ion-icon class="tamanho-icone like" name="heart"></ion-icon>
+                    <ion-icon class="tamanho-icone ${changeColor}" name={changeName} onClick={giveDislike}></ion-icon>
                     <ion-icon class="tamanho-icone" name="chatbubble-outline"></ion-icon>
                     <ion-icon class="tamanho-icone" name="paper-plane-outline"></ion-icon>
                 </div>
@@ -38,10 +63,10 @@ function Post(props) {
 
 export default function Feed() {
     const arrayPosts = [
-        { img1: "/img/9gag1.png", titulopersona: "meow", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "Respondeai" , numeroPessoas:5000 },
-        { img1: "/img/9gag1.png", titulopersona: "Voller", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "voller", numeroPessoas:100000 },
-        { img1: "/img/9gag1.png", titulopersona: "Gabriel", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "Castro", numeroPessoas:20000 },
-        { img1: "/img/9gag1.png", titulopersona: "Antônio", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "galo", numeroPessoas:30000}
+        { img1: "/img/9gag1.png", titulopersona: "meow", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "Respondeai", numeroPessoas: 5000 },
+        { img1: "/img/9gag1.png", titulopersona: "Voller", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "voller", numeroPessoas: 100000 },
+        { img1: "/img/9gag1.png", titulopersona: "Gabriel", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "Castro", numeroPessoas: 20000 },
+        { img1: "/img/9gag1.png", titulopersona: "Antônio", img2: "/img/gato-telefone.png", img3: "/img/respondeai1.png", usuario: "galo", numeroPessoas: 30000 }
     ];
 
 

@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 }
 
+.red {
+  color: red;
+}
+
 header {
   width: 935px;
   position: fixed;
@@ -27,10 +31,6 @@ header {
   width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #dbdbdb;
-}
-
-.like{
-  color: red;
 }
 
 .conteudo {
