@@ -18,8 +18,15 @@ body {
   margin: 0 auto;
 }
 
+ion-icon {
+  font-size: 25px;
+  margin-right: 10px;
+  visibility: visible;
+}
+
 .red {
   color: red;
+  visibility: visible;
 }
 
 header {
@@ -37,12 +44,6 @@ header {
   width: 935px;
   margin: 100px auto;
   position: relative;
-}
-
-.tamanho-icone {
-  font-size: 25px;
-  margin-right: 10px;
-
 }
 
 .navbar-desktop {

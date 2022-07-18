@@ -1,8 +1,8 @@
 import React from "react"
 
 function Post(props) {
+    const [changeColor, setChangeColor] = React.useState("");
     const [like, setLike] = React.useState(false);
-    const [changeColor, setChangeColor] = React.useState("red");
     const [changeName, setChangeName] = React.useState("heart-outline")
 
     function giveLike() {
@@ -13,14 +13,14 @@ function Post(props) {
 
     function giveDislike() {
         if (like) {
+            setLike(false);
             setChangeName("heart-outline");
             setChangeColor("");
-            setLike(false);
 
         } else {
+            setLike(true)
             setChangeName("heart");
             setChangeColor("red");
-            setLike(true)
         }
 
     }
@@ -43,21 +43,20 @@ function Post(props) {
 
             <div class="posts-icons">
                 <div>
-                    <ion-icon class="tamanho-icone ${changeColor}" name={changeName} onClick={giveDislike}></ion-icon>
-                    <ion-icon class="tamanho-icone" name="chatbubble-outline"></ion-icon>
-                    <ion-icon class="tamanho-icone" name="paper-plane-outline"></ion-icon>
+                    <ion-icon class={changeColor} name={changeName} onClick={giveDislike}></ion-icon>
+                    <ion-icon name="chatbubble-outline"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
                 </div>
                 <div>
-                    <ion-icon class="tamanho-icone" name="bookmark-outline"></ion-icon>
+                    <ion-icon name="bookmark-outline"></ion-icon>
                 </div>
             </div>
-
             <div class="coluna-de-posts-curtiu flex">
                 <img src={props.img3} alt="responde aí" />
                 <p>Curtido por <strong>{props.usuario}</strong> e <strong>outras {props.numeroPessoas} pessoas</strong></p>
             </div>
 
-        </div>
+        </div >
     );
 }
 
